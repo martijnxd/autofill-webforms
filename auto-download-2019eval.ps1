@@ -6,7 +6,6 @@ Unblock-File $selenium_path\webdriver.dll
 if ($env:Path -notcontains ";$selenium_path" ) {
     $env:Path += ";$selenium_path"
 }
-
 $ChromeOptions = New-Object OpenQA.Selenium.Chrome.ChromeOptions
 $ChromeOptions.AddArgument('start-maximized')
 $ChromeOptions.AcceptInsecureCertificates = $True
