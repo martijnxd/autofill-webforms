@@ -1,7 +1,7 @@
 # download webdriver.dll and browser driver from https://github.com/adamdriscoll/selenium-powershell/tree/master/assemblies
 $selenium_path = $PSScriptRoot
 Unblock-File $selenium_path\webdriver.dll
-### 
+### 3
 [System.Reflection.Assembly]::LoadFrom("{0}\WebDriver.dll" -f $selenium_path)
 if ($env:Path -notcontains ";$selenium_path" ) {
     $env:Path += ";$selenium_path"
